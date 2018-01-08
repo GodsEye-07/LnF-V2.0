@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Lottie
 
 class ViewController: UIViewController {
     
@@ -15,16 +14,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-         let animationView = LOTAnimationView(name: "email")
-            animationView.frame = CGRect(x: 0, y: 0, width: 400, height: 400)
-            animationView.center = self.view.center
-            animationView.contentMode = .scaleAspectFill
-
-            view.addSubview(animationView)
-            animationView.loopAnimation  = true
-            animationView.play()
-        
-
+        self.resignFirstResponder()
+        self.view.endEditing(true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,6 +23,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
 
+    
+  // end of the class brace
 }
 
