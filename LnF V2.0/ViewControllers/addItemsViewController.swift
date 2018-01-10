@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class addItemsViewController: UIViewController {
     
@@ -44,39 +45,48 @@ class addItemsViewController: UIViewController {
     
     @IBAction func saveButtonPressed(_ sender: Any) {
         
+        //check if all the field are filled or not.
+        
+        
      if titleTextField.text == "" || descriptionTextField.text == "" || contactTextField.text == "" || roomTextField.text == "" || placeTextField.text == "" {
         
             
             //checks if there is any empty field or not if so then it will display this message
             let action = UIAlertController(title: "Warning..!!", message: "Complete all the fields to proceed", preferredStyle: .alert)
             let okay = UIAlertAction(title: "OK", style: .default, handler: nil)
+        
             action.addAction(okay)
+        
+            present(action, animated: true, completion: nil)
             
         }
+        
+        let x = ["title" : titleTextField.text!, "desc" : descriptionTextField.text!, "verified": false, "phone" : contactTextField.text!,"PlaceFOund" : placeTextField.text!, "RoomAndBlock": roomTextField.text! ] as [String : Any]
+        
+        Database.database().reference().childByAutoId().setValue(x)
+        
+
         
     }
     
     @IBAction func addImage(_ sender: UIButton) {
         
-            if
-                UIImagePickerController.isSourceTypeAvailable(.camera){
-            let imagePicker = UIImagePickerController()
-            imagePicker.allowsEditing = false
-            imagePicker.sourceType = .photoLibrary
-            present(imagePicker, animated: true, completion: nil)
-        }
-            else{
-                
-                UIImagePickerController.isSourceTypeAvailable(.photoLibrary)
-                let imagePick = UIImagePickerController()
-                imagePick.allowsEditing = false
-                imagePick.sourceType = .photoLibrary
-                present(imagePick, animated: true, completion: nil)
-                
-        }
+        // adding the options to select which source to select to pick the image from
         
         
+        let source = UIAlertController(title: "Select the Image", message: "add a relevant image for the item found/lost", preferredStyle: .actionSheet)
         
+        let cameraOption = UIAlertAction(title: "Camera", style: .default, handler: nil)
+        let galleryOption = UIAlertAction(title: "Gallery", style: .default, handler: nil)
+        let cancelOption = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        source.addAction(cameraOption)
+        source.addAction(galleryOption)
+        source.addAction(cancelOption)
+        
+        present(source, animated: true, completion: nil)
+        
+ 
     }
     
     

@@ -19,6 +19,7 @@
 		2AA516122000915B0021B4EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AA516102000915B0021B4EB /* Main.storyboard */; };
 		2AA516142000915B0021B4EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AA516132000915B0021B4EB /* Assets.xcassets */; };
 		2AA516172000915B0021B4EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AA516152000915B0021B4EB /* LaunchScreen.storyboard */; };
+		2AF47E2120069EFF00A9A816 /* customTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF47E2020069EFF00A9A816 /* customTableViewCell.swift */; };
 		451734EB86E7001EE55D8E29 /* Pods_LnF_V2_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C25E365D8F8D739BEB87C4C6 /* Pods_LnF_V2_0.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		2AA516132000915B0021B4EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2AA516162000915B0021B4EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2AA516182000915B0021B4EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AF47E2020069EFF00A9A816 /* customTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customTableViewCell.swift; sourceTree = "<group>"; };
 		332785B1E6F16994291E2A18 /* Pods-LnF V2.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LnF V2.0.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LnF V2.0/Pods-LnF V2.0.debug.xcconfig"; sourceTree = "<group>"; };
 		6536BEA23D702F4F229F24A1 /* Pods-LnF V2.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LnF V2.0.release.xcconfig"; path = "Pods/Target Support Files/Pods-LnF V2.0/Pods-LnF V2.0.release.xcconfig"; sourceTree = "<group>"; };
 		C25E365D8F8D739BEB87C4C6 /* Pods_LnF_V2_0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LnF_V2_0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +66,7 @@
 				2A70860F200401A1006FB15E /* availabelItemsViewController.swift */,
 				2A708611200401AF006FB15E /* contactsViewController.swift */,
 				2A708613200401C5006FB15E /* feedbackViewController.swift */,
+				2AF47E222006A6E100A9A816 /* supportingFiles */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -98,6 +101,14 @@
 				2AA516182000915B0021B4EB /* Info.plist */,
 			);
 			path = "LnF V2.0";
+			sourceTree = "<group>";
+		};
+		2AF47E222006A6E100A9A816 /* supportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				2AF47E2020069EFF00A9A816 /* customTableViewCell.swift */,
+			);
+			path = supportingFiles;
 			sourceTree = "<group>";
 		};
 		2CF8DB5AA37BAD6EA7B81EBD /* Frameworks */ = {
@@ -263,6 +274,7 @@
 				2A70860E20040182006FB15E /* addItemsViewController.swift in Sources */,
 				2A708610200401A1006FB15E /* availabelItemsViewController.swift in Sources */,
 				2A708614200401C5006FB15E /* feedbackViewController.swift in Sources */,
+				2AF47E2120069EFF00A9A816 /* customTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
