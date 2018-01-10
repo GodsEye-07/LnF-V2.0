@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A6FCAD82004F89B00A21AA8 /* moreDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6FCAD72004F89B00A21AA8 /* moreDetailsViewController.swift */; };
 		2A70860E20040182006FB15E /* addItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A70860D20040182006FB15E /* addItemsViewController.swift */; };
 		2A708610200401A1006FB15E /* availabelItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A70860F200401A1006FB15E /* availabelItemsViewController.swift */; };
 		2A708612200401AF006FB15E /* contactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A708611200401AF006FB15E /* contactsViewController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A6FCAD72004F89B00A21AA8 /* moreDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moreDetailsViewController.swift; sourceTree = "<group>"; };
 		2A70860D20040182006FB15E /* addItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addItemsViewController.swift; sourceTree = "<group>"; };
 		2A70860F200401A1006FB15E /* availabelItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = availabelItemsViewController.swift; sourceTree = "<group>"; };
 		2A708611200401AF006FB15E /* contactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contactsViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 			children = (
 				2A708615200401E5006FB15E /* SignupViewController.swift */,
 				2A70861720040216006FB15E /* loginViewController.swift */,
+				2A6FCAD72004F89B00A21AA8 /* moreDetailsViewController.swift */,
 				2A70860D20040182006FB15E /* addItemsViewController.swift */,
 				2A70860F200401A1006FB15E /* availabelItemsViewController.swift */,
 				2A708611200401AF006FB15E /* contactsViewController.swift */,
@@ -254,6 +257,7 @@
 			files = (
 				2A70861820040216006FB15E /* loginViewController.swift in Sources */,
 				2A708616200401E5006FB15E /* SignupViewController.swift in Sources */,
+				2A6FCAD82004F89B00A21AA8 /* moreDetailsViewController.swift in Sources */,
 				2AA5160D2000915B0021B4EB /* AppDelegate.swift in Sources */,
 				2A708612200401AF006FB15E /* contactsViewController.swift in Sources */,
 				2A70860E20040182006FB15E /* addItemsViewController.swift in Sources */,

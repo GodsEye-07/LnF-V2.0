@@ -9,10 +9,24 @@
 import UIKit
 
 class addItemsViewController: UIViewController {
+    
+    
+    @IBOutlet weak var itemImage: UIImageView!
+    @IBOutlet weak var imageBackView: UIView!
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var placeTextField: UITextField!
+    @IBOutlet weak var descriptionTextField: UITextField!
+    @IBOutlet weak var contactTextField: UITextField!
+    @IBOutlet weak var roomTextField: UITextField!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.resignFirstResponder()
+        self.view.endEditing(true)
+        
         // Do any additional setup after loading the view.
     }
 
@@ -22,14 +36,51 @@ class addItemsViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func deleteButtonPressed(_ sender: Any) {
+        
+        self.dismiss(animated: true, completion: nil)
+ 
     }
-    */
-
+    
+    @IBAction func saveButtonPressed(_ sender: Any) {
+        
+     if titleTextField.text == "" || descriptionTextField.text == "" || contactTextField.text == "" || roomTextField.text == "" || placeTextField.text == "" {
+        
+            
+            //checks if there is any empty field or not if so then it will display this message
+            let action = UIAlertController(title: "Warning..!!", message: "Complete all the fields to proceed", preferredStyle: .alert)
+            let okay = UIAlertAction(title: "OK", style: .default, handler: nil)
+            action.addAction(okay)
+            
+        }
+        
+    }
+    
+    @IBAction func addImage(_ sender: UIButton) {
+        
+            if
+                UIImagePickerController.isSourceTypeAvailable(.camera){
+            let imagePicker = UIImagePickerController()
+            imagePicker.allowsEditing = false
+            imagePicker.sourceType = .photoLibrary
+            present(imagePicker, animated: true, completion: nil)
+        }
+            else{
+                
+                UIImagePickerController.isSourceTypeAvailable(.photoLibrary)
+                let imagePick = UIImagePickerController()
+                imagePick.allowsEditing = false
+                imagePick.sourceType = .photoLibrary
+                present(imagePick, animated: true, completion: nil)
+                
+        }
+        
+        
+        
+    }
+    
+    
+    
+    
+//end of the class brace
 }
