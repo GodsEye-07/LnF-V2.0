@@ -10,10 +10,7 @@ import UIKit
 
 class ImportantContact: UIViewController , UITableViewDelegate , UITableViewDataSource {
     
-    
-    @IBOutlet weak var contactList: UITableView!
-    
-    
+ 
     var list = ["Dean Office" , "Hostel Office Men's", "Hostel Office Girl's", "Papa John's" ,
                 "Dominos" ,"cafe Cofee Day","Burger King","Pizza Hut","Vellore Kitchen","Barbeque Nation","Subway","SJT","T.T","CDMM","CBMR","M.B","GDN","SMVG", "etc"]
     
@@ -27,8 +24,7 @@ class ImportantContact: UIViewController , UITableViewDelegate , UITableViewData
         UIApplication.shared.statusBarStyle = .default
         
         // Do any additional setup after loading the view.
-        contactList.delegate = self
-        contactList.dataSource = self
+        
     }
     
     override func didReceiveMemoryWarning() {
