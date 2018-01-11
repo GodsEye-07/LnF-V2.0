@@ -14,12 +14,12 @@
 		2A708614200401C5006FB15E /* feedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A708613200401C5006FB15E /* feedbackViewController.swift */; };
 		2A708616200401E5006FB15E /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A708615200401E5006FB15E /* SignupViewController.swift */; };
 		2A70861820040216006FB15E /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A70861720040216006FB15E /* loginViewController.swift */; };
-		2A7BD1542001642200CEAF6C /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A7BD1532001642200CEAF6C /* GoogleService-Info-2.plist */; };
 		2AA5160D2000915B0021B4EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA5160C2000915B0021B4EB /* AppDelegate.swift */; };
 		2AA516122000915B0021B4EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AA516102000915B0021B4EB /* Main.storyboard */; };
 		2AA516142000915B0021B4EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AA516132000915B0021B4EB /* Assets.xcassets */; };
 		2AA516172000915B0021B4EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AA516152000915B0021B4EB /* LaunchScreen.storyboard */; };
 		2AF47E2120069EFF00A9A816 /* customTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF47E2020069EFF00A9A816 /* customTableViewCell.swift */; };
+		2AF47E242006AEE400A9A816 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2AF47E232006AEE300A9A816 /* GoogleService-Info.plist */; };
 		451734EB86E7001EE55D8E29 /* Pods_LnF_V2_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C25E365D8F8D739BEB87C4C6 /* Pods_LnF_V2_0.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +31,6 @@
 		2A708613200401C5006FB15E /* feedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = feedbackViewController.swift; sourceTree = "<group>"; };
 		2A708615200401E5006FB15E /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		2A70861720040216006FB15E /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
-		2A7BD1532001642200CEAF6C /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-2.plist"; sourceTree = "<group>"; };
 		2AA516092000915B0021B4EB /* LnF V2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LnF V2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AA5160C2000915B0021B4EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AA516112000915B0021B4EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -39,6 +38,7 @@
 		2AA516162000915B0021B4EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2AA516182000915B0021B4EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AF47E2020069EFF00A9A816 /* customTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customTableViewCell.swift; sourceTree = "<group>"; };
+		2AF47E232006AEE300A9A816 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		332785B1E6F16994291E2A18 /* Pods-LnF V2.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LnF V2.0.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LnF V2.0/Pods-LnF V2.0.debug.xcconfig"; sourceTree = "<group>"; };
 		6536BEA23D702F4F229F24A1 /* Pods-LnF V2.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LnF V2.0.release.xcconfig"; path = "Pods/Target Support Files/Pods-LnF V2.0/Pods-LnF V2.0.release.xcconfig"; sourceTree = "<group>"; };
 		C25E365D8F8D739BEB87C4C6 /* Pods_LnF_V2_0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LnF_V2_0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,9 +95,9 @@
 				2AA5160C2000915B0021B4EB /* AppDelegate.swift */,
 				2A70860C2004004D006FB15E /* ViewControllers */,
 				2AA516102000915B0021B4EB /* Main.storyboard */,
+				2AF47E232006AEE300A9A816 /* GoogleService-Info.plist */,
 				2AA516132000915B0021B4EB /* Assets.xcassets */,
 				2AA516152000915B0021B4EB /* LaunchScreen.storyboard */,
-				2A7BD1532001642200CEAF6C /* GoogleService-Info-2.plist */,
 				2AA516182000915B0021B4EB /* Info.plist */,
 			);
 			path = "LnF V2.0";
@@ -191,8 +191,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AA516172000915B0021B4EB /* LaunchScreen.storyboard in Resources */,
+				2AF47E242006AEE400A9A816 /* GoogleService-Info.plist in Resources */,
 				2AA516142000915B0021B4EB /* Assets.xcassets in Resources */,
-				2A7BD1542001642200CEAF6C /* GoogleService-Info-2.plist in Resources */,
 				2AA516122000915B0021B4EB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

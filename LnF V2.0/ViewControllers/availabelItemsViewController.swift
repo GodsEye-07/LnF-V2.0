@@ -20,6 +20,7 @@ class availabelItemsViewController: UIViewController,UITableViewDelegate,UITable
 
         // Do any additional setup after loading the view.
         
+        UIApplication.shared.statusBarStyle = .default
         
         self.title = "Items"
         self.tableView.delegate = self
@@ -84,22 +85,29 @@ class availabelItemsViewController: UIViewController,UITableViewDelegate,UITable
     }
     
     
-    
+    // to be shareable at facebook and twitter 
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         
         // Social Sharing Button
         let shareAction = UITableViewRowAction(style:
             UITableViewRowActionStyle.default, title: "Share", handler: { (action,
                 indexPath) -> Void in
-                let defaultText = "Just checking in at " +
-                    self.lostItems[indexPath.row]
+                let defaultText = "Just checking in at " + String(describing: self.lostItems[indexPath.row]["title"]!)
                 let activityController = UIActivityViewController(activityItems:
                     [defaultText], applicationActivities: nil)
                 self.present(activityController, animated: true, completion: nil)
+     
         })
+        
+        shareAction.backgroundColor = UIColor(red: 48.0/255.0, green: 173.0/255.0,
+                                              blue: 99.0/255.0, alpha: 1.0)
        
         return [shareAction]
         
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120.0
     }
     
 

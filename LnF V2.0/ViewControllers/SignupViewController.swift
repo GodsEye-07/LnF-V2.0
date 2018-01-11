@@ -13,6 +13,9 @@ class SignupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        UIApplication.shared.statusBarStyle = .lightContent
+        
+        
         self.resignFirstResponder()
         self.view.endEditing(true)
         // Do any additional setup after loading the view.

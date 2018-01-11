@@ -25,6 +25,9 @@ class addItemsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        UIApplication.shared.statusBarStyle = .lightContent
+        
+        
         self.resignFirstResponder()
         self.view.endEditing(true)
         
@@ -47,8 +50,7 @@ class addItemsViewController: UIViewController {
         
         //check if all the field are filled or not.
         
-        
-     if titleTextField.text == "" || descriptionTextField.text == "" || contactTextField.text == "" || roomTextField.text == "" || placeTextField.text == "" {
+        if titleTextField.text == "" || descriptionTextField.text == "" || contactTextField.text == "" || roomTextField.text == "" || placeTextField.text == "" {
         
             
             //checks if there is any empty field or not if so then it will display this message
@@ -61,11 +63,11 @@ class addItemsViewController: UIViewController {
             
         }
         
-        let x = ["title" : titleTextField.text!, "desc" : descriptionTextField.text!, "verified": false, "phone" : contactTextField.text!,"PlaceFOund" : placeTextField.text!, "RoomAndBlock": roomTextField.text! ] as [String : Any]
+        let x = ["title" : titleTextField.text!, "desc" : descriptionTextField.text!, "verified": false, "phone" : contactTextField.text!,"place" : placeTextField.text!, "room": roomTextField.text! ] as [String : Any]
         
         Database.database().reference().childByAutoId().setValue(x)
         
-
+        presentingViewController?.dismiss(animated: true, completion: nil)
         
     }
     
@@ -85,6 +87,21 @@ class addItemsViewController: UIViewController {
         source.addAction(cancelOption)
         
         present(source, animated: true, completion: nil)
+        
+        
+        //look for the opening of camera or gallery option.
+        
+        
+//        if selected == source.cameraOption{
+//
+//
+//
+//        }
+//        else{
+//
+//
+//        }
+        
         
  
     }
