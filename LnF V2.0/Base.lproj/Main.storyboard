@@ -301,6 +301,9 @@
                         <viewLayoutGuide key="safeArea" id="Ubd-4h-pzP"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Contacts" image="icons8-phone_contact" selectedImage="icons8-phone_contact" id="BT3-Li-FeF"/>
+                    <connections>
+                        <outlet property="contactList" destination="wfD-il-puF" id="89z-Lq-yBI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f1F-ef-BJr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
