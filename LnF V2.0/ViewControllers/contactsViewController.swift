@@ -8,7 +8,11 @@
 
 import UIKit
 
-class ImportantContact: UIViewController , UITableViewDelegate , UITableViewDataSource {
+class contactViewController: UIViewController , UITableViewDelegate , UITableViewDataSource {
+    
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     
  
     var list = ["Dean Office" , "Hostel Office Men's", "Hostel Office Girl's", "Papa John's" ,
@@ -39,10 +43,15 @@ class ImportantContact: UIViewController , UITableViewDelegate , UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = "cell"
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! customContactTableViewCell
         
+        cell.nameLabel.text = list[indexPath.row]
+        cell.phoneNumberLabel.text = numbers[indexPath.row]
+        cell.contactImageView.backgroundColor = UIColor(red: (CGFloat(arc4random()%255) / 255.0), green: (CGFloat(arc4random()%255) / 255.0), blue: (CGFloat(arc4random()%255) / 255.0), alpha: 1.0)
         
-        cell.textLabel?.text = list[indexPath.row]
+        cell.contactImageView.layer.cornerRadius = 40.0
+        cell.clipsToBounds = true
+        
         
         return cell
     }
@@ -52,9 +61,9 @@ class ImportantContact: UIViewController , UITableViewDelegate , UITableViewData
     }
     
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        call(x :indexPath.row)
-    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        call(x :indexPath.row)
+//    }
     
     
     // takes the number from the table menu and adds it to the dialer and calls as soon as touched
@@ -71,6 +80,36 @@ class ImportantContact: UIViewController , UITableViewDelegate , UITableViewData
         }
         
     }
+    
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        let callAction = UITableViewRowAction(style:
+            UITableViewRowActionStyle.default, title: "Call", handler: { (action,
+                indexPath) -> Void in
+                
+                
+                let confirm = UIAlertController(title: "Confirm Call", message: "call to \(self.numbers[indexPath.row])", preferredStyle: .alert)
+                let button1 = UIAlertAction(title: "Ok", style: .default, handler: { (true) in
+                    self.call(x: indexPath.row)
+                })
+                let button2 = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+                
+                confirm.addAction(button1)
+                confirm.addAction(button2)
+                
+                self.present(confirm, animated: true, completion: nil)
+            
+                
+                
+        })
+        
+        return [callAction]
+        
+    }
+    
+ 
+    
     
     /*
      // MARK: - Navigation

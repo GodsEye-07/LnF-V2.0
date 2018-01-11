@@ -9,9 +9,10 @@
 import UIKit
 import MessageUI
 
-class ReachUs: UIViewController,MFMailComposeViewControllerDelegate  {
+class feedbackViewController: UIViewController,MFMailComposeViewControllerDelegate  {
     
     @IBOutlet weak var subjectTF: UITextField!
+    @IBOutlet weak var messageTF: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,15 +43,15 @@ class ReachUs: UIViewController,MFMailComposeViewControllerDelegate  {
         controller.dismiss(animated: true, completion: nil)
     }
     
+        
+        @IBAction func sendMail(_ sender: Any) {
+            if subjectTF.text != "" && messageTF.text != "" {
+                sendEmail()
+            }
+        }
     
-    // to send the mail
     
-    //    @IBAction func sendMail(_ sender: Any) {
-    //        if subjectTF.text != "" && messageTF.text != "" {
-    //            sendEmail()
-    //        }
-    //    }
-    //
+    
     /*
      // MARK: - Navigation
      
