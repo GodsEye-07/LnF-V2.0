@@ -16,14 +16,17 @@ class contactViewController: UIViewController , UITableViewDelegate , UITableVie
     
  
     var list = ["Dean Office" , "Hostel Office Men's", "Hostel Office Girl's", "Papa John's" ,
-                "Dominos" ,"cafe Cofee Day","Burger King","Pizza Hut","Vellore Kitchen","Barbeque Nation","Subway","SJT","T.T","CDMM","CBMR","M.B","GDN","SMVG", "etc"]
+                "Dominos" ]
     
-    var numbers = ["9833451538","7010725407","8085443407"]
+    var numbers = ["9833451538","7010725407","8085443407","7010725407","8085443407"]
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
         
         UIApplication.shared.statusBarStyle = .default
         
@@ -89,7 +92,7 @@ class contactViewController: UIViewController , UITableViewDelegate , UITableVie
                 indexPath) -> Void in
                 
                 
-                let confirm = UIAlertController(title: "Confirm Call", message: "call to \(self.numbers[indexPath.row])", preferredStyle: .alert)
+                let confirm = UIAlertController(title: "Confirm Call", message: "call to \(self.list[indexPath.row])", preferredStyle: .alert)
                 let button1 = UIAlertAction(title: "Ok", style: .default, handler: { (true) in
                     self.call(x: indexPath.row)
                 })
@@ -97,17 +100,23 @@ class contactViewController: UIViewController , UITableViewDelegate , UITableVie
                 
                 confirm.addAction(button1)
                 confirm.addAction(button2)
-                
+
                 self.present(confirm, animated: true, completion: nil)
             
-                
-                
+               
         })
+        
+        
+        callAction.backgroundColor = UIColor.purple
         
         return [callAction]
         
     }
     
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100.0
+    }
  
     
     
