@@ -9,17 +9,24 @@
 import UIKit
 import MessageUI
 
+
 class feedbackViewController: UIViewController,MFMailComposeViewControllerDelegate  {
+
     
     @IBOutlet weak var subjectTF: UITextField!
     @IBOutlet weak var messageTF: UITextField!
+    @IBOutlet weak var pageTitleLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        
+    
     }
     
+   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

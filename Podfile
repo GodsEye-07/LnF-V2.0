@@ -9,6 +9,7 @@ pod 'Firebase/Auth'
 pod 'Firebase/Core'
 pod 'Firebase/Database'
 pod 'lottie-ios'
+pod 'Shimmer'
 
 
   # Pods for LnF V2.0
