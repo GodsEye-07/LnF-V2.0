@@ -61,13 +61,13 @@
 		2A70860C2004004D006FB15E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				2A6FCAD72004F89B00A21AA8 /* moreDetailsViewController.swift */,
-				2A70860F200401A1006FB15E /* availabelItemsViewController.swift */,
-				2A708615200401E5006FB15E /* SignupViewController.swift */,
-				2A708611200401AF006FB15E /* contactsViewController.swift */,
 				2A70861720040216006FB15E /* loginViewController.swift */,
-				2ABDB6FD2007CD1B008902AB /* feedbackViewController.swift */,
+				2A708615200401E5006FB15E /* SignupViewController.swift */,
+				2A70860F200401A1006FB15E /* availabelItemsViewController.swift */,
 				2A70860D20040182006FB15E /* addItemsViewController.swift */,
+				2A6FCAD72004F89B00A21AA8 /* moreDetailsViewController.swift */,
+				2A708611200401AF006FB15E /* contactsViewController.swift */,
+				2ABDB6FD2007CD1B008902AB /* feedbackViewController.swift */,
 				2AF47E222006A6E100A9A816 /* supportingFiles */,
 			);
 			path = ViewControllers;

@@ -30,10 +30,14 @@ class feedbackViewController: UIViewController,MFMailComposeViewControllerDelega
         composeVC.mailComposeDelegate = self
         // Configure the fields of the interface.
         composeVC.setToRecipients(["ayush.verma2016@vitstudent.ac.in"])
-        //        composeVC.setSubject("\(subjectTF.text!)")
-        //        composeVC.setMessageBody("\(messageTF.text!)", isHTML: false)
+                composeVC.setSubject("\(subjectTF.text!)")
+                composeVC.setMessageBody("\(messageTF.text!)", isHTML: false)
+        
         // Present the view controller modally.
-        self.present(composeVC, animated: true, completion: nil)
+        present(composeVC, animated: true, completion: nil)
+        
+        
+        
     }
     
     func mailComposeController(_ controller: MFMailComposeViewController,
@@ -47,6 +51,15 @@ class feedbackViewController: UIViewController,MFMailComposeViewControllerDelega
         @IBAction func sendMail(_ sender: Any) {
             if subjectTF.text != "" && messageTF.text != "" {
                 sendEmail()
+            }
+            else{
+                
+                let warning  = UIAlertController(title: "Some Fields Empty", message: "Please fill all the details to submit", preferredStyle: .alert)
+                
+                let btn1 = UIAlertAction(title: "Ok", style: .default, handler: nil)
+                warning.addAction(btn1)
+                
+                present(warning, animated: true, completion: nil)
             }
         }
     

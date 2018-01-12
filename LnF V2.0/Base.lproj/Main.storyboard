@@ -360,7 +360,7 @@
                                     <action selector="sendMail:" destination="RYE-Ac-2JZ" eventType="touchUpInside" id="eo2-UY-A6F"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mVO-e6-fdq">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mVO-e6-fdq">
                                 <rect key="frame" x="0.0" y="211" width="375" height="286"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="1" green="0.7581373951" blue="0.28041029119999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
