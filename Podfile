@@ -6,6 +6,7 @@ target 'LnF V2.0' do
   use_frameworks!
 
 pod 'FirebaseUI/Auth'
+pod 'FirebaseUI'
 pod 'FirebaseUI/Google'
 pod 'FirebaseUI/Facebook'
 pod 'Firebase/Core'
