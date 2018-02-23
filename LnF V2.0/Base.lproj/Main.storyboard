@@ -274,10 +274,60 @@
                     <view key="view" contentMode="scaleToFill" id="7Vr-lS-RCr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7Tb-Kk-C6Y">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="100" id="1qI-7s-MCl" customClass="customContactTableViewCell" customModule="LnF_V2_0" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1qI-7s-MCl" id="fUu-Km-Hew">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nyX-EV-U0G">
+                                                    <rect key="frame" x="15" y="9" width="80" height="80"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HpK-zK-jPt">
+                                                    <rect key="frame" x="103" y="11" width="257" height="36"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0tE-J0-aiA">
+                                                    <rect key="frame" x="103" y="55" width="257" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="contactImageView" destination="nyX-EV-U0G" id="6ZN-2v-4w3"/>
+                                            <outlet property="nameLabel" destination="HpK-zK-jPt" id="jjX-1Q-mjY"/>
+                                            <outlet property="phoneNumberLabel" destination="0tE-J0-aiA" id="1LR-S9-DiL"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7Tb-Kk-C6Y" firstAttribute="leading" secondItem="Ubd-4h-pzP" secondAttribute="leading" id="3e6-qc-blM"/>
+                            <constraint firstItem="7Tb-Kk-C6Y" firstAttribute="top" secondItem="7Vr-lS-RCr" secondAttribute="top" id="JYH-42-Uye"/>
+                            <constraint firstItem="7Tb-Kk-C6Y" firstAttribute="bottom" secondItem="Ubd-4h-pzP" secondAttribute="bottom" id="ZCw-u2-QqC"/>
+                            <constraint firstItem="7Tb-Kk-C6Y" firstAttribute="trailing" secondItem="Ubd-4h-pzP" secondAttribute="trailing" id="y4s-G1-lfd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Ubd-4h-pzP"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Contacts" image="icons8-phone_contact" selectedImage="icons8-phone_contact" id="BT3-Li-FeF"/>
+                    <connections>
+                        <outlet property="tableView" destination="7Tb-Kk-C6Y" id="STV-Th-dxD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f1F-ef-BJr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

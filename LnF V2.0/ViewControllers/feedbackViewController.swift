@@ -41,7 +41,7 @@ class feedbackViewController: UIViewController,MFMailComposeViewControllerDelega
                 composeVC.setMessageBody("\(messageTF.text!)", isHTML: false)
         
         // Present the view controller modally.
-        self.present(composeVC, animated: true, completion: nil)
+//        self.present(composeVC, animated: true, completion: nil)
    
     }
     

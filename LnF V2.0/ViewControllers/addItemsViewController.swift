@@ -90,10 +90,10 @@ class addItemsViewController: UIViewController {
         
         
         //look for the opening of camera or gallery option.
-     
-     
+
         
- 
+        
+        
     }
     
     

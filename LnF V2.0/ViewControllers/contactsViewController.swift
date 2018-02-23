@@ -64,9 +64,10 @@ class contactViewController: UIViewController , UITableViewDelegate , UITableVie
     }
     
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        call(x :indexPath.row)
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        call(x :indexPath.row)
+    }
+    
     
     
     // takes the number from the table menu and adds it to the dialer and calls as soon as touched
@@ -74,7 +75,7 @@ class contactViewController: UIViewController , UITableViewDelegate , UITableVie
         if let phoneCallURL = URL(string: "tel://\(numbers[x])") {
             let application:UIApplication = UIApplication.shared
             if (application.canOpenURL(phoneCallURL)) {
-                if #available(iOS 10.0, *) {
+                if #available(iOS 11.0, *) {
                     application.open(phoneCallURL, options: [:], completionHandler: nil)
                 } else {
                     UIApplication.shared.openURL(phoneCallURL)
